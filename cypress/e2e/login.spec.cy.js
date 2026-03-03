@@ -16,4 +16,9 @@ describe('Login RWA Tests', () => {
     loginPage.loginWithUser(userData.userFail.username, userData.userFail.password)
     loginPage.checkInvalidData()
   })
+
+  it('Login with user - empty field', () => {
+    loginPage.accessLoginPage()
+    loginPage.checkEmptyField()
+  })
 })

@@ -5,7 +5,8 @@ class LoginPage {
            passwordField: '[name="password"]',
            invalidDataAlert: '.MuiAlert-standard',
            signinButton: '[type="submit"]',
-           checkMenuGrid: '.MuiPaper-root'
+           checkMenuGrid: '.MuiPaper-root',
+           userNameAlert: '#username-helper-text'
         }
    return selectors}
     accessLoginPage() {
@@ -24,6 +25,11 @@ class LoginPage {
 
     checkInvalidData() {
         cy.get(this.selectorsList().invalidDataAlert).should('be.visible')
+    }
+
+    checkEmptyField() {
+        cy.get(this.selectorsList().userNameField).click().blur()
+        cy.get(this.selectorsList().userNameAlert).should('be.visible')
     }
    
   

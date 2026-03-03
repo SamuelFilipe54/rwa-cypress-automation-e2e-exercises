@@ -12,8 +12,9 @@ class RegisterPage {
             lastNameAlert: '#lastName-helper-text',
             userNameAlert: '#username-helper-text',
             passwordAlert: '#password-helper-text',
-            confirmPasswordAlert: '#confirmPassword-helper-text'
+            confirmPasswordAlert: '#confirmPassword-helper-text',
         }
+        
    return selectors}
    accessRegisterPage() {
        cy.visit('/signup')
@@ -26,7 +27,14 @@ class RegisterPage {
     cy.get(this.selectorsList().passwordField).type(password)
     cy.get(this.selectorsList().confirmPasswordField).type(confirmPassword)
     cy.get(this.selectorsList().signUpButton).click()
-    
+   }
+
+   registerWithUserFail(firstName, lastName, userName, password, confirmPassword) {
+    cy.get(this.selectorsList().firstNameField).type(firstName)
+    cy.get(this.selectorsList().lastNameField).type(lastName)
+    cy.get(this.selectorsList().userNameField).type(userName)
+    cy.get(this.selectorsList().passwordField).type(password)
+    cy.get(this.selectorsList().confirmPasswordField).type(confirmPassword)
    }
 
    checkLoginPage() {
@@ -43,6 +51,15 @@ class RegisterPage {
     cy.get(this.selectorsList().passwordField).click().blur()
     cy.get(this.selectorsList().passwordAlert).should('be.visible')
     cy.get(this.selectorsList().confirmPasswordField).click().blur()
+    cy.get(this.selectorsList().confirmPasswordAlert).should('be.visible')
+   }
+
+   passwordWithOnly4Characters() {
+    cy.get(this.selectorsList().passwordAlert).should('be.visible')
+   }
+
+   checkPasswordConfirmation() {
+    cy.get(this.selectorsList().confirmPasswordField)
     cy.get(this.selectorsList().confirmPasswordAlert).should('be.visible')
    }
 
