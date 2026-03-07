@@ -1,4 +1,4 @@
-Este projeto utiliza Cypress para automatizar features do site Real World App (RWA)
+# Este projeto utiliza Cypress para automatizar features do site Real World App (RWA)
 
 ## Installation
 para rodar o yarn dev, é necessário clonar o repositório do RWA
@@ -16,7 +16,7 @@ yarn install
 yarn dev
 ```
 
-## deixe a aplicação rodando e agora clone este projeto
+deixe a aplicação rodando e agora clone este projeto
 ``` branch
 git clone https://github.com/SamuelFilipe54/rwa-cypress-automation-e2e-exercises.git
 ```
