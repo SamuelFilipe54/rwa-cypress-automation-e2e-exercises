@@ -5,7 +5,7 @@ class LoginPage {
            passwordField: '[name="password"]',
            invalidDataAlert: '.MuiAlert-standard',
            signinButton: '[type="submit"]',
-           checkMenuGrid: '.MuiPaper-root',
+           checkMenuGrid: '[data-test="sidenav-user-full-name"]',
            userNameAlert: '#username-helper-text'
         }
    return selectors}
