@@ -22,7 +22,6 @@ git clone https://github.com/SamuelFilipe54/rwa-cypress-automation-e2e-exercises
 ```
 e nele faça a instalação das dependências da automação
 ``` branch
-cd cypress-rwa-tests
 npm install
 ```
 
