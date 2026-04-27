@@ -2,6 +2,13 @@
 
 # Requisitos para melhor funcionamento:
 Node v20.20.2
+caso queira mudar a versão do seu node, instale o nvm e no seu terminal, use:
+```
+nvm install 20
+```
+```
+nvm use 20
+```
 
 ## Instalação
 Primeiro, é necessário rodar o servidor do RWA em um terminal (git) separado. Então clone o repositório oficial da aplicação RWA:
