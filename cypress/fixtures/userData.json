@@ -7,7 +7,11 @@
 "userFail": {
     "username": "failfail",
     "password": "0000"
-}
+},
 
+"userWithoutBalance": {
+    "username": "James20",
+    "password": "s3cret"
+}
 
 }

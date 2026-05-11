@@ -21,4 +21,6 @@ describe('Login RWA Tests', () => {
     loginPage.accessLoginPage()
     loginPage.checkEmptyField()
   })
+
+  
 })

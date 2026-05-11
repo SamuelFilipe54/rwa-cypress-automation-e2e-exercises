@@ -19,6 +19,12 @@ class LoginPage {
         cy.get(this.selectorsList().signinButton).click()
     }
 
+    loginUserWithoutBalance(username, password) {
+        cy.get(this.selectorsList().userNameField).type(username)
+        cy.get(this.selectorsList().passwordField).type(password)
+        cy.get(this.selectorsList().signinButton).click()
+    }
+
     checkMenuPage(){
         cy.get(this.selectorsList().checkMenuGrid).should('be.visible')
     }
